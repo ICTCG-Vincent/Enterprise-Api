@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "b8fef092-9823-4ad3-ad91-ed7f009225c8",
+		"name": "Contact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://95.182.232.202:9090/api/contacts",
+					"protocol": "http",
+					"host": [
+						"95",
+						"182",
+						"232",
+						"202"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://95.182.232.202:9090/api/contacts/4",
+					"protocol": "http",
+					"host": [
+						"95",
+						"182",
+						"232",
+						"202"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"contacts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"Van Uytven\",\r\n    \"status\": \"Freelance\",\r\n    \"tva\": \"BE0723600303\",\r\n    \"address\": {\r\n        \"id\": 4,\r\n        \"street\": \"street4\",\r\n        \"city\": \"city4\"\r\n    },\r\n    \"enterprise\": [\r\n        \r\n    ],\r\n    \"firstName\": \"Vincent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://95.182.232.202:9090/api/contacts",
+					"protocol": "http",
+					"host": [
+						"95",
+						"182",
+						"232",
+						"202"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/api/contacts/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"contacts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNewEmployeeContact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"status\": \"Employee\",\r\n    \"address\": {\r\n        \"street\": \"\",\r\n        \"city\": \"\"\r\n    },\r\n    \"enterprise\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"firstName\": \"Vincent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://95.182.232.202:9090/api/contacts",
+					"protocol": "http",
+					"host": [
+						"95",
+						"182",
+						"232",
+						"202"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNewFreelanceContact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"status\": \"Freelance\",\r\n    \"tva\": \"BE0723600303\",\r\n    \"address\": {\r\n        \"street\": \"\",\r\n        \"city\": \"\"\r\n    },\r\n    \"enterprise\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"firstName\": \"Vincent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://95.182.232.202:9090/api/contacts",
+					"protocol": "http",
+					"host": [
+						"95",
+						"182",
+						"232",
+						"202"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
