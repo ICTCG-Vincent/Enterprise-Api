@@ -11,8 +11,8 @@ public class CamelRoutes extends RouteBuilder {
     public void configure() {
         restConfiguration()
                 .component("servlet")
-                .bindingMode(RestBindingMode.off)//Enables binding mode for JSON
-                .jsonDataFormat("json-jackson")//Specifies the component that Camel uses to implement the JSON data format
+                .bindingMode(RestBindingMode.off)
+                .jsonDataFormat("json-jackson")
                 .dataFormatProperty("prettyPrint", "true");
 
         rest("/greetings/")
